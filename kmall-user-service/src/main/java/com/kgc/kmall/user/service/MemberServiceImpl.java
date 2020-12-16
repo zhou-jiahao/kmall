@@ -1,6 +1,6 @@
 package com.kgc.kmall.user.service;
 
-import com.kgc.kmall.user.bean.Member;
+import com.kgc.kmall.bean.Member;
 import com.kgc.kmall.user.mapper.MemberMapper;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.stereotype.Component;

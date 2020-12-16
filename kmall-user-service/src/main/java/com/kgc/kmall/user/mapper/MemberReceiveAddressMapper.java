@@ -1,7 +1,7 @@
 package com.kgc.kmall.user.mapper;
 
-import com.kgc.kmall.user.bean.MemberReceiveAddress;
-import com.kgc.kmall.user.bean.MemberReceiveAddressExample;
+import com.kgc.kmall.bean.MemberReceiveAddress;
+import com.kgc.kmall.bean.MemberReceiveAddressExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

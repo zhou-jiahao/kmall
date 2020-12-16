@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.kgc.kmall.user.mapper.MemberLevelMapper" >
-  <resultMap id="BaseResultMap" type="com.kgc.kmall.user.bean.MemberLevel" >
+  <resultMap id="BaseResultMap" type="com.kgc.kmall.bean.MemberLevel" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="growth_point" property="growthPoint" jdbcType="INTEGER" />
@@ -79,7 +79,7 @@
     priviledge_free_freight, priviledge_sign_in, priviledge_comment, priviledge_promotion, 
     priviledge_member_price, priviledge_birthday, note
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.kgc.kmall.user.bean.MemberLevelExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.kgc.kmall.bean.MemberLevelExample" >
     select
     <if test="distinct" >
       distinct
@@ -103,13 +103,13 @@
     delete from ums_member_level
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByExample" parameterType="com.kgc.kmall.user.bean.MemberLevelExample" >
+  <delete id="deleteByExample" parameterType="com.kgc.kmall.bean.MemberLevelExample" >
     delete from ums_member_level
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.kgc.kmall.user.bean.MemberLevel" >
+  <insert id="insert" parameterType="com.kgc.kmall.bean.MemberLevel" >
     insert into ums_member_level (id, name, growth_point, 
       default_status, free_freight_point, comment_growth_point, 
       priviledge_free_freight, priviledge_sign_in, 
@@ -123,7 +123,7 @@
       #{priviledgeMemberPrice,jdbcType=INTEGER}, #{priviledgeBirthday,jdbcType=INTEGER}, 
       #{note,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.kgc.kmall.user.bean.MemberLevel" >
+  <insert id="insertSelective" parameterType="com.kgc.kmall.bean.MemberLevel" >
     insert into ums_member_level
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -208,7 +208,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.kgc.kmall.user.bean.MemberLevelExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="com.kgc.kmall.bean.MemberLevelExample" resultType="java.lang.Integer" >
     select count(*) from ums_member_level
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
@@ -280,7 +280,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.kgc.kmall.user.bean.MemberLevel" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.kgc.kmall.bean.MemberLevel" >
     update ums_member_level
     <set >
       <if test="name != null" >
@@ -322,7 +322,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.kgc.kmall.user.bean.MemberLevel" >
+  <update id="updateByPrimaryKey" parameterType="com.kgc.kmall.bean.MemberLevel" >
     update ums_member_level
     set name = #{name,jdbcType=VARCHAR},
       growth_point = #{growthPoint,jdbcType=INTEGER},

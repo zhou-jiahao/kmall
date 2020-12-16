@@ -1,7 +1,7 @@
 package com.kgc.kmall.user.mapper;
 
-import com.kgc.kmall.user.bean.MemberLevel;
-import com.kgc.kmall.user.bean.MemberLevelExample;
+import com.kgc.kmall.bean.MemberLevel;
+import com.kgc.kmall.bean.MemberLevelExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
