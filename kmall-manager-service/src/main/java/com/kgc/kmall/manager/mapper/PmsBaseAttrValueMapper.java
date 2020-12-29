@@ -1,4 +1,4 @@
-package com.com.kmall.manager.mapper;
+package com.kgc.kmall.manager.mapper;
 
 import com.kgc.kmall.bean.PmsBaseAttrValue;
 import com.kgc.kmall.bean.PmsBaseAttrValueExample;
@@ -28,4 +28,6 @@ public interface PmsBaseAttrValueMapper {
     int updateByPrimaryKeySelective(PmsBaseAttrValue record);
 
     int updateByPrimaryKey(PmsBaseAttrValue record);
+
+    int insertBatch(@Param("attrId") Long attrId, @Param("valueList") List<PmsBaseAttrValue> valueList);
 }

@@ -1,9 +1,9 @@
-package com.com.kmall.manager.service;
+package com.kgc.kmall.manager.service;
 
-import com.com.kmall.manager.mapper.PmsBaseCatalog1Mapper;
-import com.com.kmall.manager.mapper.PmsBaseCatalog2Mapper;
-import com.com.kmall.manager.mapper.PmsBaseCatalog3Mapper;
 import com.kgc.kmall.bean.*;
+import com.kgc.kmall.manager.mapper.PmsBaseCatalog1Mapper;
+import com.kgc.kmall.manager.mapper.PmsBaseCatalog2Mapper;
+import com.kgc.kmall.manager.mapper.PmsBaseCatalog3Mapper;
 import com.kgc.kmall.service.CatalogService;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.stereotype.Component;

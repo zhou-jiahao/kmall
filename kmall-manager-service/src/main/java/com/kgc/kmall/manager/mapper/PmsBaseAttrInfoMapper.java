@@ -1,4 +1,4 @@
-package com.com.kmall.manager.mapper;
+package com.kgc.kmall.manager.mapper;
 
 import com.kgc.kmall.bean.PmsBaseAttrInfo;
 import com.kgc.kmall.bean.PmsBaseAttrInfoExample;

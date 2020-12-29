@@ -1,11 +1,9 @@
 package com.kgc.kmall.manager.controller;
 
-
 import com.kgc.kmall.bean.PmsBaseCatalog1;
 import com.kgc.kmall.bean.PmsBaseCatalog2;
 import com.kgc.kmall.bean.PmsBaseCatalog3;
 import com.kgc.kmall.service.CatalogService;
-
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
