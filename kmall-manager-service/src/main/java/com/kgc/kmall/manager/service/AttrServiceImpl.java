@@ -1,16 +1,19 @@
 package com.kgc.kmall.manager.service;
 
+import com.alibaba.fastjson.JSON;
 import com.kgc.kmall.bean.PmsBaseAttrInfo;
 import com.kgc.kmall.bean.PmsBaseAttrInfoExample;
 import com.kgc.kmall.bean.PmsBaseAttrValue;
 import com.kgc.kmall.bean.PmsBaseAttrValueExample;
 import com.kgc.kmall.manager.mapper.PmsBaseAttrInfoMapper;
 import com.kgc.kmall.service.AttrService;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Set;
 
 @Component
 @Service
@@ -68,5 +71,16 @@ public class AttrServiceImpl implements AttrService {
         PmsBaseAttrValueExample.Criteria criteria = example.createCriteria();
         criteria.andAttrIdEqualTo(attrId);
         return PmsBaseAttrValueMapper.selectByExample(example);
+    }
+
+    @Override
+    public List<PmsBaseAttrInfo> selectAttrInfoValueListByValueId(Set<Long> valueIds) {
+        //获取Set集合里的值
+        String join = StringUtils.join(valueIds);
+        //截取第一位和最后一位
+        join=join.substring(1,join.length()-1);
+        System.out.println(join);
+        List<PmsBaseAttrInfo> pmsBaseAttrInfos = pmsBaseAttrInfoMapper.selectAttrInfoValueListByValueId(join);
+        return pmsBaseAttrInfos;
     }
 }

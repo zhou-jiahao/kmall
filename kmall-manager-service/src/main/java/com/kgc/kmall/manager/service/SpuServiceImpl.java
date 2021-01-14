@@ -101,4 +101,9 @@ public class SpuServiceImpl implements SpuService {
         imageExample.createCriteria().andProductIdEqualTo(spuId);
         return pmsProductImageMapper.selectByExample(imageExample);
     }
+
+    @Override
+    public List<PmsProductSaleAttr> spuSaleAttrListIsCheck(Long spuId, Long skuId) {
+        return pmsProductSaleAttrMapper.spuSaleAttrListIsCheck(spuId,skuId);
+    }
 }
